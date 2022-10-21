@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>小学一年级20以内加减法</title>
+  <style type="text/css">
+
+h1{
+ margin-left:250px;
+ margin-top:50px;
+ font-size:100px;
+ letter-spacing:2px;
+}
+div#quesetion input,span{
+margin:20px;
+font-size:30px;
+text-align:center;
+}
+div#answer input{
+  margin:70px;
+  font-size:20px;
+  padding:20px; 
+  text-align:center;
+}
+
+ 
+  </style>  
+ </head>
+ <body>
+ <h1>welcome</h1>
+ <div id="quesetion" class="">
+ <input id="num1" value=""></input>
+ <span class="">+</span>
+ <input id="num2" value="" ></input>	
+ </div>
+
+ <div id="answer" class="">
+ A.<input type="button" id="A" value="">
+ B.<input type="button" id="B" value="">
+ C.<input type="button" id="C" value="">
+ D.<input type="button" id="D" value="">	
+ </div>
+ <script>
+ var num1=parseInt(10 * Math.random());
+ var num2=parseInt(10 * Math.random());
+ var num1Dom=document.querySelector("input#num1");
+ var num2Dom=document.querySelector("input#num2");
+ var answerDoms=document.querySelectorAll("div#answer input");
+    num1Dom.value=num1;num2Dom.value=num2;
+	for (i=0;i<4 ;i++ )	{
+		var answer = parseInt(20 * Math.random());
+		answerDoms[i].value = answer;
+		answerDoms[i].onclick = function(){
+		var answer = num1 + num2;
+		var sel = parseInt(this.value);
+		if(sel === answer){
+		alert("true");
+		}else{
+		  alert("false");
+		}
+		
+		}
+	} 	var i=parseInt(4*Math.random())
+		answerDoms[i].value = num1 + num2;	
+	
+
+ </script>
+  
+ </body>
+</html>
