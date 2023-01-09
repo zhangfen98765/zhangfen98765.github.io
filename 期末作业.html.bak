@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+ <head>
+ <meta charset="UTF-8">
+  <title>Document</title>
+  <style type="text/css">
+  body
+  {
+background-image:url('https://bpic.588ku.com/illus_water_img/19/09/25/892b776ae7ec1b23bdcef82fd582b628.jpg!/fw/750/quality/99/unsharp/true/compress/true');
+background-repeat:no-repeat;
+background-size:1400px ;
+
+  }
+	div{
+	background-image:url('https://tse2-mm.cn.bing.net/th/id/OIP-C.07P_ZBJD9JTVK6fziK2BYAHaNL?pid=PersonalBing&rs=1');
+	background-size:200px 240px;
+	background-position:-5px -50px;
+	width:150px;
+	background-color:rgba(192,192,192,0.1);
+	border:1px solid #009900;
+	display:inline-block;
+	margin:10px;
+	color:#009900;
+	text-align:center;
+	padding:20px;
+	font-size:20px;
+	letter-spacing:5px;
+	border-radius:50%;
+	position:absolute;
+	}
+  </style>
+ </head>
+ <body>
+  <script type="text/javascript">
+  var s = '红豆生南国，春来发几枝。愿君多采撷，此物最相思。'
+  for( var i=0 ; i<100; i++){
+	var divDom = document.createElement('div');
+	divDom.textContent = s;
+    divDom.onmouseover=function(){
+	var x=Math.floor(Math.random()* window.innerWidth);
+	var y=Math.floor(Math.random()* window.innerHeight);
+	this.style.left=x+'px';
+    this.style.top=y+'px';
+	}
+	randPositionDiv(divDom);
+	document.body.appendChild(divDom);
+  }
+  function randPositionDiv(dom){
+    var x=Math.floor(Math.random()*window.innerWidth);
+	var y=Math.floor(Math.random()*window.innerHeight);
+    dom.style.left=x+'px';
+    dom.style.top=y+'px';
+  }  
+  </script>
+ </body>
+</html>
